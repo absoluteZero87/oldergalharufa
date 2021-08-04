@@ -1,0 +1,54 @@
+.casting-details {
+  .title-name {
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: 400;
+  }
+  .actor-name {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+  }
+  figure {
+    margin: 0;
+
+    figcaption {
+      text-align: center;
+    }
+  }
+  .video-container {
+    p {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+  .casting-info {
+    .label-info {
+      font-weight: 700;
+      color: black;
+    }
+    .text-minicv {
+      word-wrap: break-word;
+      text-align: justify;
+    }
+  }
+  th::after,
+  .label-info::after {
+    content: ': ';
+  }
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+  .casting-details {
+    figure {
+      margin: 1em 40px;
+    }
+  }
+}
+@media (min-width: 376px) and (max-width: 992px) {
+  .casting-details {
+    figure {
+      margin: 1em 40px;
+    }
+  }
+}

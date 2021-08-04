@@ -1,0 +1,74 @@
+<header>
+  <ul id="casting" class="dropdown-content">
+    <li><a href="" ng-click="path('/casting',{ cas_tipo: 'Talentos'});">Talentos</a></li>
+    <li><a href="" ng-click="path('/casting',{ cas_tipo: 'Exclusivos'});">Exclusivos</a></li>
+    <li><a href="" ng-click="path('/casting',{ cas_tipo: 'Atores'});">Atores</a></li>
+    <li><a href="" ng-click="path('/casting',{ cas_tipo: 'Infantil'});">Infantil</a></li>
+  </ul>
+  <ul class="side-nav" id="mobile-demo">
+    <li><a href="" ng-click="path('/home');">Home</a></li>
+    <li><a href="" ng-click="path('/quemsomos');">A Galharufa</a></li>
+    <li><a href="" ng-click="path('/servicos');">Serviços</a></li>
+    <li>
+      <a class="dropdown-button" href="#!" data-activates="casting1"
+        >Casting
+        <i class="material-icons right">arrow_drop_down</i>
+      </a>
+    </li>
+    <ul id="casting1" class="dropdown-content">
+      <li><a href="" ng-click="path('/casting',{ cas_tipo: 'Talentos'});">Talentos</a></li>
+      <li><a href="" ng-click="path('/casting',{ cas_tipo: 'Exclusivos'});">Exclusivos</a></li>
+      <li><a href="" ng-click="path('/casting',{ cas_tipo: 'Atores'});">Atores</a></li>
+      <li><a href="" ng-click="path('/casting',{ cas_tipo: 'Infantil'});">Infantil</a></li>
+    </ul>
+    <li><a href="" ng-click="path('/contato');">Contato</a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="" ng-click="path('/home');" class="brand-logo">
+        <img
+          src="/images/logo-horizontal.png"
+          srcset="/images/logo-horizontal@2x.png 2x, /images/logo-horizontal@3x.png 3x"
+          alt=""
+        />
+      </a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"
+        ><i class="material-icons">menu</i></a
+      >
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="active"><a href="" ng-click="path('/home');">Home</a></li>
+        <li><a href="" ng-click="path('/quemsomos');">A Galharufa</a></li>
+        <li><a href="" ng-click="path('/servicos');">Serviços</a></li>
+        <li><a href="" class="blog-link" ng-click="path('/blog');">Blog</a></li>
+
+        <li>
+          <a class="dropdown-button" href="#!" data-activates="casting"
+            >Casting
+            <i class="material-icons right">arrow_drop_down</i>
+          </a>
+        </li>
+        <li><a href="" ng-click="path('/contato');">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<script>
+  $(document).ready(function () {
+    $('ul.right li').on('click', function () {
+      var clicked = $(this);
+      $('ul.right li').each(function () {
+        if ($(this).hasClass('active')) {
+          $(this).removeClass('active');
+        }
+      });
+      $(this).addClass('active');
+    });
+
+    $('.button-collapse').sideNav({
+      // closeOnClick: true,
+      // edge: 'left',
+      // menuWidth: 300
+    });
+    $('.dropdown-button').dropdown({});
+  });
+</script>

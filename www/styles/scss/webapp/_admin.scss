@@ -1,0 +1,110 @@
+.dash-home,
+.dash-casting,
+.dash-casting-search,
+.dash-casting-show,
+.dash-users,
+.dash-quemsomos,
+.dash-servicos {
+  padding-left: 305px;
+  padding-top: 5px;
+
+  blockquote {
+    border-left: 5px solid $black-main;
+  }
+  .gender-filter {
+    margin-top: 35px;
+
+    [type='radio']:checked + label:after {
+      background-color: $black-smoke;
+      border: 2px solid $black-smoke;
+    }
+  }
+
+  .session-name {
+    .material-icons {
+      position: relative;
+      top: 5px;
+      margin: 0 5px;
+    }
+  }
+  .btn {
+    background-color: white;
+    color: $black-main;
+    &:hover {
+      background-color: whitesmoke;
+    }
+    &:focus {
+      background-color: whitesmoke;
+    }
+  }
+  .btn-large {
+    &:hover {
+      background-color: whitesmoke;
+    }
+    &:focus {
+      background-color: whitesmoke;
+    }
+  }
+  .btn-floating {
+    &:focus {
+      background-color: whitesmoke;
+    }
+  }
+
+  .input-field {
+    color: #000;
+    label {
+      font-weight: 700;
+      color: #000;
+    }
+    input,
+    textarea {
+      &:focus {
+        + label {
+          color: #bbb !important;
+        }
+        border-bottom: 1px solid #bbb !important;
+        box-shadow: 0 1px 0 0 #bbb !important;
+      }
+    }
+  }
+
+  .tabs {
+    .indicator {
+      background-color: #d0d0d0;
+    }
+    .tab {
+      a {
+        color: black;
+        font-weight: 700;
+      }
+    }
+  }
+  .profile-img {
+    img {
+      text-align: center;
+    }
+  }
+  .dropdown-content li > a,
+  .dropdown-content li > span {
+    color: #455a64;
+  }
+  .btn-table {
+    a {
+      color: $black-main;
+      &:hover,
+      &:focus,
+      &:active {
+        color: black;
+      }
+    }
+  }
+  th::after,
+  textarea::after {
+    content: ': ';
+  }
+
+  @media only screen and (max-width: 992px) {
+    padding-left: 0;
+  }
+}

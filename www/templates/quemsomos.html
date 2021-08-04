@@ -1,0 +1,48 @@
+<main ng-init="init()" class="quemsomos">
+  <div class="container">
+    <div class="spacing"></div>
+    <div class="spacing"></div>
+    <div class="spacing"></div>
+    
+    <div class="whoweare">
+      <div class="row">
+        <div class="col s12 m6 l6 xl6">
+          <div class="side-text">
+              <h5 class="left-align">14 anos de mercado incluindo: </h5>
+              <ul class="topics">
+                <li>Longas</li>
+                <li>Séries</li>
+                <li>Publicidades</li>
+                <li>institucionais</li>
+                <li>Novelas</li>
+                <li>Clipes</li>
+                <li>Curta e Média metragem</li>
+                <li>Sede situada em São Paulo - Capital.</li>
+                <li>Atendimento para todo Brasil e Exterior</li>
+                <li>Pioneira em pesquisa de campo e pesquisa de elenco</li>
+                <li>Amplo casting</li>
+                <li>Equipe altamente qualificada</li>
+                <li>Departamento de casting exclusivo</li>
+                <li>Equipe de fiscais de set</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col s12 m6 l6 xl6">
+            <div class="main-text" ng-bind-html="vm.quemsomos"></div>
+            <div class="spacing"></div>
+            <div class="spacing"></div>
+            <figure>
+              <img src="../images/juliana-web.jpg" class="responsive-img" alt="Juliana Azevedo">
+              <figcaption>Juliana Azevedo - Diretora</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script>
+    $(document).ready(function(){
+      Materialize.updateTextFields();
+    });
+  </script>

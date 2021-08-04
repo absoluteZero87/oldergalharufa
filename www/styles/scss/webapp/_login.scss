@@ -1,0 +1,42 @@
+.login {
+  .card-panel{
+    background-color: #eee;
+    color: $black-main;
+  }
+  .input-field {
+    color: #000;
+    label {
+      color: #888;
+
+    }
+    input, textarea {
+      &:focus {
+        + label {
+          color: #bbb !important;
+        }
+        border-bottom: 1px solid #bbb !important;
+        box-shadow: 0 1px 0 0 #BBB !important;
+      }
+    }
+  }
+  .btn {
+    background-color: white;
+    color: $black-main;
+    margin-bottom: 10px;
+    
+    &:hover {
+      background-color: whitesmoke;
+    }
+    &:focus {
+      background-color: whitesmoke;
+    }
+  }
+  .btn-large {
+    &:hover {
+      background-color: white;
+    }
+    &:focus {
+      background-color: white;
+    }
+  }
+}

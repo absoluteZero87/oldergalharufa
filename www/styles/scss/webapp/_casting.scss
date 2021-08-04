@@ -1,0 +1,45 @@
+.casting{
+    .title-name{
+        text-transform: uppercase;
+        font-size: 42px;
+        font-weight: 300;
+    }
+    figure{
+        margin: 0;
+        
+        &:hover{
+            cursor: pointer;
+        }
+        figcaption{
+            color: $black-main;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+    .gender-filter{
+        margin-top: 35px;
+        
+        [type="radio"]:checked+label:after{
+            background-color: $black-smoke;
+            border: 2px solid $black-smoke;
+        }
+    }
+    
+}
+
+
+@media (min-width: 0px) and (max-width: 375px) {
+    .casting{
+        figure {
+            margin: 1em 40px;
+        }
+    }
+}
+@media (min-width: 376px) and (max-width: 992px) {
+    .casting{
+        figure {
+            margin: 1em 40px;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.contato{
+  .contact-box{
+    border: 1px solid #ccc;
+    padding: 20px 0;
+    font-weight: 300;
+
+    .list-icons{
+      font-size: 16px;
+
+      a{
+        color: black;
+
+        &:hover{
+          text-decoration: underline;;
+        }
+      }
+      .material-icons{
+        font-size: 18px;
+      }
+    }
+  }
+  .btn {
+    background-color:$black-main;
+    color: white;
+    margin-bottom: 10px;
+    
+    &:hover {
+      background-color: $black-smoke;
+    }
+    &:focus {
+      background-color: $black-smoke;
+    }
+  }
+  .btn-large {
+    &:hover {
+      background-color: white;
+    }
+    &:focus {
+      background-color: white;
+    }
+  }
+  .btn-floating {
+    &:focus {
+      background-color: white;
+    }
+  }
+}

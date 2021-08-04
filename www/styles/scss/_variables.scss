@@ -1,0 +1,75 @@
+$yellow-dark: #FFAB33;
+$yellow-main:  #FFD740;
+
+$black-main: #212121;
+$black-smoke: #464646;
+
+$salmon-light: #F69C80;
+$salmon-main: #FF9E80;
+$salmon-dark: #CC7E66;
+
+$navy-light: #36A9B6;
+$navy-main: #0097A7;
+$navy-dark: #006974;
+
+$green-main: #1E8EA0;
+
+$purple-light: #B2AFE9;
+$purple-main: #78769D;
+$purple-dark: #51506A;
+
+$gray-light: #FAFAFA;
+$gray-line: rgb(131, 131, 131);
+
+$white: #FFF;
+$black: #000;
+
+.white {@include bg-color($white);}
+.bg-black {@include bg-color($black);}
+.bg-yellow-main {
+    @include bg-color($yellow-main);
+    &:hover{
+        @include bg-color($yellow-main);
+    }
+}
+.bg-icon-servicos{
+    @include bg-color($white);
+    border:1px solid $gray-line;
+}
+.bg-yellow-dark {@include bg-color($yellow-dark);}
+
+.bg-salmon-light {@include bg-color($salmon-light);}
+.bg-salmon-main {@include bg-color($salmon-main);}
+.bg-salmon-dark {@include bg-color($salmon-dark);}
+
+.bg-navy-light {@include bg-color($navy-light);}
+.bg-navy-main {@include bg-color($navy-main);}
+.bg-navy-dark {@include bg-color($navy-dark);}
+
+.bg-purple-light {@include bg-color($purple-light);}
+.bg-purple-main {@include bg-color($purple-main);}
+.bg-purple-dark {@include bg-color($purple-dark);}
+
+.bg-gray-light {@include bg-color($gray-light);}
+
+
+
+.white {@include color($white);}
+.black {@include color($black);}
+
+.yellow-main {@include color($yellow-main);}
+.yellow-dark {@include color($yellow-dark);}
+
+.salmon-light {@include color($salmon-light);}
+.salmon-main {@include color($salmon-main);}
+.salmon-dark {@include color($salmon-dark);}
+
+.navy-light {@include color($navy-light);}
+.navy-main {@include color($navy-main);}
+.navy-dark {@include color($navy-dark);}
+
+.purple-light {@include color($purple-light);}
+.purple-main {@include color($purple-main);}
+.purple-dark {@include color($purple-dark);}
+
+.gray-light {@include color($gray-light);}

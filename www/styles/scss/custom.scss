@@ -1,0 +1,76 @@
+// @import './bower_components/materialize/sass/materialize.scss';
+
+@import 'mixins';
+@import 'variables';
+@import 'typography';
+html {
+  font-family: Lato, Calibri, Trebuchet, sans-serif;
+}
+.testing {
+  width: percentage(10/7);
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+
+  .btn {
+    &:hover {
+      background-color: #006974;
+    }
+    &:focus {
+      background-color: #006974;
+    }
+  }
+  .btn-large {
+    &:hover {
+      background-color: #006974;
+    }
+    &:focus {
+      background-color: #006974;
+    }
+  }
+  .btn-floating {
+    &:focus {
+      background-color: #006974;
+    }
+  }
+  .input-field {
+    color: #000;
+    label {
+      color: #888;
+      
+    }
+    input, textarea {
+      &:focus {
+        + label {
+          color: #bbb !important;
+        }
+        border-bottom: 1px solid #bbb !important;
+        box-shadow: 0 1px 0 0 #BBB !important;
+      }
+    }
+  }
+}
+.spacing{
+  padding-bottom: 10px;
+}
+
+@import 'webapp/header';
+@import 'webapp/footer';
+@import 'webapp/login';
+@import 'webapp/admin';
+@import 'webapp/home';
+@import 'webapp/quemsomos';
+@import 'webapp/servicos';
+@import 'webapp/casting';
+@import 'webapp/casting_details';
+@import 'webapp/contato';
+@import 'webapp/blog';

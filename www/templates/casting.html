@@ -1,0 +1,41 @@
+<main ng-init="init()" class="casting">
+  <div class="container">
+    
+    <div class="row">
+      <div class="col s12 m12 l12 xl12">
+        <h3 class="title-name center-align">{{title}}</h3>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col s12 m4 l4 xl4">
+        <p class="gender-filter">
+          <input name="gender" ng-model="searchText.cas_genero" value="M" type="radio" id="masculino" />
+          <label for="masculino">Masculino</label>
+          <input name="gender" ng-model="searchText.cas_genero" value="F" type="radio" id="feminino" />
+          <label for="feminino">Feminino</label>
+        </p>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div ng-repeat="model in vm.casting | orderBy:'cas_nomeart' | filter:searchText:strict">
+        <div class="col s12 m3 l3 xl3">
+          <figure ng-click="path('/casting-details/'+model.cas_id)">
+            <img *ngIf="model.cas_foto34" ng-src="{{model.cas_foto34}}" class="responsive-img">
+            <figcaption>
+              {{model.cas_nomeart}}
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</main>
+
+<script>
+  $(document).ready(function () {
+    Materialize.updateTextFields();
+  });
+</script>

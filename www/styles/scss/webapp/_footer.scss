@@ -1,0 +1,23 @@
+footer{
+  &.page-footer{
+    background-color: #020202;
+    font-weight: 300;
+    padding-top: 0px;
+    padding: 5px 0;
+
+    p{
+      color: $white;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    .blog-link{
+      color: $white;
+
+      &:hover, &:focus{
+        outline: none;
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+  }
+}
