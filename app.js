@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var mysql = require('mysql');
 var connection = require('express-myconnection');
 
+//routes declaration
 var users = require('./routes/usuarios');
 var casting = require('./routes/casting');
 var servicos = require('./routes/servicos');
@@ -82,7 +83,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -96,16 +97,22 @@ app.use('/api/servicos', servicos);
 app.use('/api/quemsomos', quemsomos);
 app.use('/api/contato', contato);
 
-app.use(express.static(__dirname + '/www'));
-
-// app.use('/bower_components',express.static(path.join(__dirname, 'www/bower_components')));
 app.use('/js', express.static(path.join(__dirname, 'www/js')));
 app.use('/shared', express.static(path.join(__dirname, 'www/shared')));
 app.use('/styles', express.static(path.join(__dirname, 'www/styles')));
 app.use('/images', express.static(path.join(__dirname, 'www/images/casting')));
 
-app.use('/', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(__dirname + '/www/index.html');
+});
+
+app.use(express.static(__dirname + '/www'));
+
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+app.listen(port, function () {
+  console.log('Listening on port ' + port);
 });
 
 // catch 404 and forward to error handler
@@ -125,5 +132,21 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
 
 module.exports = app;

@@ -57,7 +57,7 @@ app.constant('Configs', {
   appToken: '',
   // apiUrl:'http://localhost:3000/api/'
   // apiUrl:'http://www.agenciagalharufa.com.br/api/'
-  apiUrl: 'https://galharufa-dev.herokuapp.com/api',
+  apiUrl: 'https://galharufa-dev.herokuapp.com/api/',
 });
 
 app.config([
