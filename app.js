@@ -35,15 +35,36 @@ var server = http.createServer(function (req, res) {
 });
 server.listen(process.env.PORT);
 
+// app.use(
+//   connection(
+//     mysql,
+//     {
+//       host: 'mysql669.umbler.com',
+//       user: 'admagencia',
+//       password: 'agenciagalharufa',
+//       port: 41890, //port mysql
+//       database: 'galharufa',
+//       typeCast: function castField(field, useDefaultTypeCasting) {
+//         if (field.type === 'BIT' && field.length === 1) {
+//           var bytes = field.buffer();
+//           return bytes[0] === 1;
+//         }
+//         return useDefaultTypeCasting();
+//       },
+//     },
+//     'request',
+//   ),
+// );
+
 app.use(
   connection(
     mysql,
     {
-      host: 'mysql669.umbler.com',
-      user: 'admagencia',
-      password: 'agenciagalharufa',
-      port: 41890, //port mysql
-      database: 'galharufa',
+      host: 'us-cdbr-east-04.cleardb.com',
+      user: 'bb1a698543b12c',
+      password: 'cf9010587f0ec8c',
+      port: 3306, //port mysql
+      database: 'heroku_1360f6def34c55d',
       typeCast: function castField(field, useDefaultTypeCasting) {
         if (field.type === 'BIT' && field.length === 1) {
           var bytes = field.buffer();
