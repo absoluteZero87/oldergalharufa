@@ -142,11 +142,13 @@ function normalizePort(val) {
   return false;
 }
 
-var http = require('http');
-var server = http.createServer(function (req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello world!');
-});
-server.listen(process.env.PORT);
+//var http = require('http');
+//var server = http.createServer(function (req, res) {
+//  res.writeHead(200, { 'Content-Type': 'text/plain' });
+//  res.end('Hello world!');
+//});
+//server.listen(process.env.PORT);
+
+app.listen(process.env.PORT, () => console.log(`Listening on ${ process.env.PORT }`))
 
 module.exports = app;
