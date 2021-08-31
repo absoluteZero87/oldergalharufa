@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",
-    "dev": "node app.js",
+    "start": "node server.js",
+    "dev": "node server.js",
     "scss": "node-sass --watch custom.scss -o ."
   },
   "dependencies": {
