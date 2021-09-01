@@ -29,13 +29,6 @@ app.all('*', function (req, res, next) {
   // }
 });
 
-var http = require('http');
-var server = http.createServer(function (req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello world!');
-});
-server.listen(process.env.PORT);
-
 // app.use(
 //   connection(
 //     mysql,
@@ -111,9 +104,9 @@ app.use(express.static(__dirname + '/www'));
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
-app.listen(port, function () {
-  console.log('Listening on port ' + port);
-});
+// app.listen(port, function () {
+//   console.log('Listening on port ' + port);
+// });
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -148,5 +141,14 @@ function normalizePort(val) {
 
   return false;
 }
+
+//var http = require('http');
+//var server = http.createServer(function (req, res) {
+//  res.writeHead(200, { 'Content-Type': 'text/plain' });
+//  res.end('Hello world!');
+//});
+//server.listen(process.env.PORT);
+
+app.listen(process.env.PORT, () => console.log(`Listening on ${ process.env.PORT }`))
 
 module.exports = app;
